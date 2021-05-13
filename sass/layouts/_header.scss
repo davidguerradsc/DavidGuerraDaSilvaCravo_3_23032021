@@ -1,0 +1,39 @@
+
+.header {
+    &-logo {
+        display: flex;
+        justify-content: center;
+        padding: 4vw;
+        margin-bottom: 3px;
+        box-shadow: 0px 3px 4px -1px rgba(0,0,0,0.4);
+        &-image {
+            width: 50%;
+        }
+    }
+    &-search {
+        display: flex;
+        justify-content: center;
+        padding: 3vw;
+        background-color: #EAEAEA;
+        &-icon {
+            color: lighten($color: $text-color, $amount: 25%);
+            font-size: 1.3rem;
+            align-self: center;
+        }
+    }
+    &-search-input {
+        border: none;
+        margin-left: 3vw;
+        height: 6vw;
+        background-color: #EAEAEA;
+        @include text-input;
+        &::placeholder {
+            @include text-input;
+        }
+        &:focus {
+            @include text-input;
+        }
+    }
+    
+}
+

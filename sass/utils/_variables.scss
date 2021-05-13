@@ -1,0 +1,7 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary:#99E2D0;
+$text-color: #000;
+$color-background: lighten($color: #eaeaea, $amount: 5%);
+$gradient-color: linear-gradient(352deg, $color-primary, $color-secondary);
+$gradient-color-light: linear-gradient(352deg, lighten($color-primary, 4%), lighten($color-secondary, 4%));
