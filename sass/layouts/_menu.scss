@@ -1,0 +1,92 @@
+.header-logo-arrow-back {
+    color: black;
+}
+
+.menu {
+    background-color: $color-background;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 8vw 6vw;
+    transform: translateY(-14vw);
+    margin-bottom: -14vw;
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.restaurant-name {
+    font-weight: lighter;
+    font-size: 2.1rem;
+}
+
+.title {
+    font-size: 1.7rem;
+}
+
+.restaurant-heart {
+    padding-top: unset;
+}
+
+.plat {
+    &-title {
+        text-transform: uppercase;
+        margin: 8vw 0 3vw 0;
+        & h2 {
+            font-weight: 300;
+            &::after {
+                content: "";
+                border-bottom: 3px solid #99e2d0;
+                display: block;
+                padding-top: 2vw;
+                width: 11vw;
+            }
+        }
+    }
+}
+
+.card-plat {
+    @include card;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    &-description {
+        width: 66vw;
+        padding: 4vw 0 3vw 4vw;
+        overflow: hidden;
+    }
+    &-title {
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin-bottom: 2vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &-accompaniment {
+        font-weight: 200;
+        font-size: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &-price {
+        @include price-and-checked-position(17vw, flex-end);
+        font-weight: 500;
+        transform: translateX(8vw);
+        transition: all 1000ms;
+    }
+    &-checked {
+        @include price-and-checked-position(0, center);
+        font-size: 1.4rem;
+        color: white;
+        background-color: $color-tertiary;
+        transform: translateX(17vw);
+        transform: scale(0vw);
+        transition: all 1000ms;
+
+        & .icon {
+            transform: rotate(0deg);
+            transition: all 1000ms 320ms;
+        }
+    }
+}

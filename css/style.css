@@ -1,3 +1,44 @@
+.card-content-heart:hover .default-icon {
+  transform: scaleX(0);
+  animation: fadeOut ease 2000ms;
+  display: none;
+}
+.card-content-heart:hover .selected-icon {
+  display: unset;
+  transform: scale(1);
+  animation: fadeIn ease 2000ms;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.card-plat:hover .card-plat-price {
+  width: 17vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 4vw 4vw;
+  transform: translateX(0);
+}
+.card-plat:hover .card-plat-checked {
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vw 4vw;
+  display: flex;
+  overflow: hidden;
+  transform: translateX(0vw);
+}
+.card-plat:hover .card-plat-checked .icon {
+  transform: rotate(360deg);
+}
+
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -77,6 +118,11 @@ th {
   padding: 0;
 }
 
+.header-logo-arrow-back {
+  margin-left: 3vw;
+  text-decoration: none;
+}
+
 .block-button {
   display: flex;
   justify-content: center;
@@ -95,6 +141,11 @@ th {
 .block-button .btn:hover {
   background: linear-gradient(352deg, #9e67e0, #ff8de0);
   box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.7);
+}
+
+.selected-icon {
+  display: none;
+  color: #FF79DA;
 }
 
 body {
@@ -117,15 +168,27 @@ body {
   font-weight: 100;
 }
 
-.header-logo {
+.header-home {
   display: flex;
-  justify-content: center;
   padding: 4vw;
   margin-bottom: 3px;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0px 3px 4px -1px rgba(0, 0, 0, 0.4);
 }
-.header-logo-image {
+.header-home-logo {
   width: 50%;
+}
+.header-pages {
+  display: flex;
+  padding: 4vw;
+  margin-bottom: 3px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-pages-logo {
+  width: 50%;
+  transform: translate(-50%);
 }
 .header-search {
   display: flex;
@@ -188,11 +251,11 @@ body {
   padding: 10vw 5vw;
 }
 .section-presentation {
-  background-color: #f7f7f7;
+  background-color: #f6f6f6;
   text-align: center;
 }
 .section-restaurant {
-  background-color: #f7f7f7;
+  background-color: #f6f6f6;
 }
 .section-title {
   margin-bottom: 7vw;
@@ -211,13 +274,12 @@ body {
 
 .operation {
   border-radius: 20px;
-  box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: baseline;
   margin-bottom: 7vw;
   margin-left: 3vw;
   padding: 6vw 0vw;
-  background-color: #f7f7f7;
+  background-color: #f6f6f6;
 }
 .operation:hover {
   background-color: #f4eefc;
@@ -283,47 +345,126 @@ body {
   font-weight: 300;
 }
 .card-content-heart {
-  position: relative;
   padding-top: 3vw;
   padding-right: 4vw;
   font-size: 1.5rem;
   color: #5b5b5b;
 }
 
-.selected-icon {
-  display: none;
-  color: #FF79DA;
+.restaurants-link {
+  text-decoration: none;
+  color: black;
 }
 
-.card-content-heart:hover {
-  /* transition: animation 20s ease; */
-}
-.card-content-heart:hover .default-icon {
-  transform: scaleX(0);
-  animation: fadeOut ease 2s;
-  display: none;
-}
-.card-content-heart:hover .selected-icon {
-  display: unset;
-  transform: scale(2);
-  animation: fadeIn ease 2000ms;
+.new-tag {
+  background: #99E2D0;
+  padding: 2vw 4vw;
+  position: relative;
+  top: -59vw;
+  left: 60vw;
+  font-weight: 500;
+  color: #278870;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
+.header-logo-arrow-back {
+  color: black;
 }
-@keyframes fadeOut {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
+
+.menu {
+  background-color: #f6f6f6;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  padding: 8vw 6vw;
+  transform: translateY(-14vw);
+  margin-bottom: -14vw;
+}
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurant-name {
+  font-weight: lighter;
+  font-size: 2.1rem;
+}
+
+.title {
+  font-size: 1.7rem;
+}
+
+.restaurant-heart {
+  padding-top: unset;
+}
+
+.plat-title {
+  text-transform: uppercase;
+  margin: 8vw 0 3vw 0;
+}
+.plat-title h2 {
+  font-weight: 300;
+}
+.plat-title h2::after {
+  content: "";
+  border-bottom: 3px solid #99e2d0;
+  display: block;
+  padding-top: 2vw;
+  width: 11vw;
+}
+
+.card-plat {
+  border-radius: 5vw;
+  background-color: white;
+  box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.35);
+  margin-bottom: 5vw;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.card-plat-description {
+  width: 66vw;
+  padding: 4vw 0 3vw 4vw;
+  overflow: hidden;
+}
+.card-plat-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 2vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-plat-accompaniment {
+  font-weight: 200;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-plat-price {
+  width: 17vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 4vw 4vw;
+  font-weight: 500;
+  transform: translateX(8vw);
+  transition: all 1000ms;
+}
+.card-plat-checked {
+  width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vw 4vw;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #99E2D0;
+  transform: translateX(17vw);
+  transform: scale(0vw);
+  transition: all 1000ms;
+}
+.card-plat-checked .icon {
+  transform: rotate(0deg);
+  transition: all 1000ms 320ms;
 }
 
 /*# sourceMappingURL=style.css.map */

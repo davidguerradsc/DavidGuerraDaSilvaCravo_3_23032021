@@ -4,10 +4,12 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
         <meta
             name="description"
             content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte !"
         />
+        <title>Oh my food - home</title>
         <link rel="stylesheet" href="./css/style.css" />
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -22,9 +24,10 @@
     </head>
     <body>
         <header class="header">
-            <div class="header-logo">
+            <div class="header-home">
+                
                 <img
-                    class="header-logo-image"
+                    class="header-home-logo"
                     src="./assets/images/logo/ohmyfood.png"
                     alt="Logo de oh my food"
                 />
@@ -87,76 +90,100 @@
         <section id="restaurant" class="section section-restaurant">
             <h1 class="section-title">restaurants</h1>
             <article class="card">
-                <img
+                <a href="./pages/la_palette_du_gout.html" class="restaurants-link">
+                    
+                    <img
                     src="./assets/images/restaurants/la_palette_du_gout.jpg"
                     alt="restaurant La palette du goût"
                     class="card-img"
-                />
-                <div class="card-content">
-                    <div>
-                        <h2 class="card-content-title">La palette du goût</h2>
-                        <p class="card-content-location">Ménilmontant</p>
-                    </div>
-                    <span class="card-content-heart">
-                        <i class="far fa-heart default-icon"></i>
-                        <i class="fas fa-heart selected-icon"></i>
-                    </span>
-                </div>
-            </article>
-            <article class="card">
-                <img
-                    src="./assets/images/restaurants/la_note_enchantee.jpg"
-                    alt="restaurant La palette du goût"
-                    class="card-img"
-                />
-                <div class="card-content">
-                    <div>
-                        <h2 class="card-content-title">La note enchantée</h2>
-                        <p class="card-content-location">Charonne</p>
-                    </div>
-                    <span class="card-content-heart">
-                        <i class="far fa-heart default-icon"></i>
-                        <i class="fas fa-heart selected-icon"></i>
-                    </span>
-                </div>
-            </article>
-            <article class="card">
-                <img
-                    src="./assets/images/restaurants/a_la_francaise.jpg"
-                    alt="restaurant La palette du goût"
-                    class="card-img"
-                />
-                <div class="card-content">
-                    <div>
-                        <h2 class="card-content-title">À la française</h2>
-                        <p class="card-content-location">Cité Rouge</p>
-                    </div>
-                    <span class="card-content-heart">
-                        <span class="default-icon">
-                            <i class="far fa-heart "></i>
+                    />
+                    
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-content-title">La palette du goût</h2>
+                            <p class="card-content-location">Ménilmontant</p>
+                        </div>
+                        <span class="card-content-heart">
+                            <span class="default-icon">
+                                <i class="far fa-heart "></i>
+                            </span>
+                            <span class="selected-icon">
+                                <i class="fas fa-heart "></i>
+                            </span>
                         </span>
-                        <span class="selected-icon">
-                            <i class="fas fa-heart "></i>
-                        </span>
-                    </span>
-                </div>
+                    </div>
+                    <span class="new-tag">Nouveau</span>
+                </a>
             </article>
             <article class="card">
-                <img
-                    src="./assets/images/restaurants/le_delice_des_sens.jpg"
-                    alt="restaurant La palette du goût"
-                    class="card-img"
-                />
-                <div class="card-content">
-                    <div>
-                        <h2 class="card-content-title">Les délices des sens</h2>
-                        <p class="card-content-location">Folie-Méricourt</p>
+                <a href="" class="restaurants-link">
+                    <img
+                        src="./assets/images/restaurants/la_note_enchantee.jpg"
+                        alt="restaurant La palette du goût"
+                        class="card-img"
+                    />
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-content-title">La note enchantée</h2>
+                            <p class="card-content-location">Charonne</p>
+                        </div>
+                        <span class="card-content-heart">
+                            <span class="default-icon">
+                                <i class="far fa-heart "></i>
+                            </span>
+                            <span class="selected-icon">
+                                <i class="fas fa-heart "></i>
+                            </span>
+                        </span>
                     </div>
-                    <span class="card-content-heart">
-                        <i class="far fa-heart default-icon"></i>
-                        <i class="fas fa-heart selected-icon"></i>
-                    </span>
-                </div>
+                    <span class="new-tag">Nouveau</span>
+                </a>
+            </article>
+            <article class="card">
+                <a href="" class="restaurants-link">
+                    <img
+                        src="./assets/images/restaurants/a_la_francaise.jpg"
+                        alt="restaurant La palette du goût"
+                        class="card-img"
+                    />
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-content-title">À la française</h2>
+                            <p class="card-content-location">Cité Rouge</p>
+                        </div>
+                        <span class="card-content-heart">
+                            <span class="default-icon">
+                                <i class="far fa-heart "></i>
+                            </span>
+                            <span class="selected-icon">
+                                <i class="fas fa-heart "></i>
+                            </span>
+                        </span>
+                    </div>
+                </a>
+            </article>
+            <article class="card">
+                <a href="" class="restaurants-link">
+                    <img
+                        src="./assets/images/restaurants/le_delice_des_sens.jpg"
+                        alt="restaurant La palette du goût"
+                        class="card-img"
+                    />
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-content-title">Les délices des sens</h2>
+                            <p class="card-content-location">Folie-Méricourt</p>
+                        </div>
+                        <span class="card-content-heart">
+                            <span class="default-icon">
+                                <i class="far fa-heart "></i>
+                            </span>
+                            <span class="selected-icon">
+                                <i class="fas fa-heart "></i>
+                            </span>
+                        </span>
+                    </div>
+                </a>
             </article>
         </section>
         <footer class="footer">

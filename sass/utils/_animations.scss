@@ -1,0 +1,43 @@
+.card-content-heart:hover {
+    .default-icon {
+        transform: scaleX(0);
+        animation: fadeOut ease 2000ms;
+        display: none;
+    }
+    
+    .selected-icon {
+        display: unset;
+        transform: scale(1);
+        animation: fadeIn ease 2000ms;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0%;
+        }
+    
+        100% {
+            opacity: 100%;
+        }
+    }
+}
+
+.card-plat:hover {
+    .card-plat {
+        &-price {
+            @include price-and-checked-position(17vw, flex-end);
+            transform: translateX(0);
+        }
+        &-checked {
+            @include price-and-checked-position(15vw, center);
+            display: flex;
+            overflow: hidden;
+            transform: translateX(0vw);
+            & .icon {
+                transform: rotate(360deg);
+            }
+        }
+        
+    }
+
+}

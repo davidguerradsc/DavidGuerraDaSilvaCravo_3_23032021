@@ -22,7 +22,6 @@
 
 .operation {
     border-radius: 20px;
-    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: baseline;
     margin-bottom: 7vw;
@@ -62,10 +61,7 @@
 .card {
     height: 66vw;
     width: 90vw;
-    border-radius: 5vw;
-    background-color: white;
-    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.35);
-    margin-bottom: 5vw;
+    @include card;
     &-img {
         width: 90vw;
         height: 45vw;
@@ -80,6 +76,7 @@
         flex-wrap: wrap;
         height: 15vw;
         margin: 2vw 3vw;
+        
         &-title {
             font-size: 1.2rem;
             font-weight: 500;
@@ -90,7 +87,6 @@
             font-weight: 300;
         }
         &-heart {
-            position: relative;
             padding-top: 3vw;
             padding-right: 4vw;
             font-size: 1.5rem;
@@ -99,40 +95,22 @@
     }
 }
 
-.selected-icon {
-    display: none;
-    color: $color-secondary;
+
+
+
+
+.restaurants-link {
+    text-decoration: none;
+    color: black;
 }
 
-.card-content-heart:hover {
-    /* transition: animation 20s ease; */
-    .default-icon {
-        transform: scaleX(0);
-        animation: fadeOut ease 2s;
-        display: none;
-    }
-    .selected-icon {
-        display: unset;
-        transform: scale(2);
-        animation: fadeIn ease 2000ms;
-    }
+.new-tag {
+    background: $color-tertiary;
+    padding: 2vw 4vw;
+    position: relative;
+    top: -59vw;
+    left: 60vw;
+    font-weight: 500;
+    color: darken($color: $color-tertiary , $amount: 40%);
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0%;
-    }
-
-    100% {
-        opacity: 100%;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}

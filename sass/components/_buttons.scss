@@ -1,7 +1,16 @@
+.header-logo-arrow-back {
+    margin-left: 3vw;
+    text-decoration: none;
+}
+
 .block-button {
     @include block-button;
     & .btn {
         @include btn;
-    }
-    
+    }   
+}
+
+.selected-icon {
+    display: none;
+    color: $color-secondary;
 }
