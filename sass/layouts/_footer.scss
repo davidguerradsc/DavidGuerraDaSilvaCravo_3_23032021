@@ -1,22 +1,43 @@
-.footer {
+footer {
     background-color: #353535;
     color: white;
     padding: 6vw;
+    @include tablet-only {
+    }
+}
+
+.footer {
     display: flex;
     flex-direction: column;
-    &-links{
+    &-links {
         color: white;
         text-decoration: none;
         margin-bottom: 2.5vw;
+    }
+    @include tablet-only {
+        flex-direction: unset;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        &-links {
+            width: 40vw;
+            text-align: center;
+        }
     }
 }
 
 .app-name {
     font-size: 1.1rem;
-    letter-spacing: .05rem;
+    letter-spacing: 0.05rem;
     margin-bottom: 5vw;
+    @include tablet-only {
+        font-size: 2.5rem;
+        text-align: center;
+    }
 }
 
 .icone-footer {
     margin-right: 3vw;
+    @include tablet-only {
+        margin-right: 1vw;
+    }
 }

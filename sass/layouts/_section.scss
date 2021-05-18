@@ -10,6 +10,9 @@
     &-title {
         @include section-title;
         margin-bottom: 7vw;
+        @include tablet-only {
+            margin-bottom: 5vw;
+        }
     }
     &-description {
         @include text-description;
@@ -18,6 +21,13 @@
 
 .title-presentation {
     margin: 0vw 12vw;
+}
+
+.operations {
+    @include tablet-only {
+        display: flex;
+        justify-content: space-evenly;
+    }
 }
 
 .operation {
@@ -56,6 +66,31 @@
         @include section-title;
         font-size: 1em;
     }
+    @include tablet-only {
+        align-items: center;
+        padding: 1vw 0;
+        margin-bottom: 0;
+        &-sort {
+            width: 4vw;
+            height: 4vw;
+        }
+        &-icon {
+            font-size: 1.3em;
+            margin-left: 1vw;
+            margin-right: 2vw;
+        }
+        &-content {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.cards {
+    @include tablet-only {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 .card {
@@ -66,9 +101,12 @@
         width: 90vw;
         height: 45vw;
         object-fit: cover;
+    }
+    & .bottom {
         object-position: bottom;
-        border-top-left-radius: 5vw;
-        border-top-right-radius: 5vw;
+    }
+    & .center {
+        object-position: center;
     }
     &-content {
         display: flex;
@@ -76,7 +114,7 @@
         flex-wrap: wrap;
         height: 15vw;
         margin: 2vw 3vw;
-        
+
         &-title {
             font-size: 1.2rem;
             font-weight: 500;
@@ -93,11 +131,27 @@
             color: #5b5b5b;
         }
     }
+    @include tablet-only {
+        width: 42vw;
+        height: 36vw;
+        &-img {
+            width: 42vw;
+            height: 25vw;
+        }
+        /* &-img-center {
+            width: 42vw;
+            height: 25vw;
+        } */
+        &-content {
+            margin: 0 3vw;
+            height: 0;
+            flex-wrap: unset;
+            &-heart {
+                font-size: 2rem;
+            }
+        }
+    }
 }
-
-
-
-
 
 .restaurants-link {
     text-decoration: none;
@@ -111,6 +165,10 @@
     top: -59vw;
     left: 60vw;
     font-weight: 500;
-    color: darken($color: $color-tertiary , $amount: 40%);
+    color: darken($color: $color-tertiary, $amount: 40%);
+    @include tablet-only {
+        padding: 1vw 2vw;
+        top: -22vw;
+        left: 27vw;
+    }
 }
-

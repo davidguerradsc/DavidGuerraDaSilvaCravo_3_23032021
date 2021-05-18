@@ -1,6 +1,7 @@
-.header-logo-arrow-back {
+/* .header-logo-arrow-back {
     color: black;
-}
+    position: absolute;
+} */
 
 .menu {
     background-color: $color-background;
@@ -13,26 +14,43 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 8vw;
+    }
+    @include tablet-only {
+        padding: 4vw 6vw 7vw;
+        &-header {
+            margin-bottom: 4vw;
+        }
     }
 }
 
-.restaurant-name {
+/* .restaurant-name {
     font-weight: lighter;
     font-size: 2.1rem;
-}
+} */
 
 .title {
     font-size: 1.7rem;
+    @include tablet-only {
+        font-size: 2.5rem;
+    }
 }
 
 .restaurant-heart {
     padding-top: unset;
 }
 
+.sections-plats {
+    @include tablet-only {
+        margin-bottom: 4vw;
+    }
+}
+
 .plat {
+    margin-bottom: 10vw;
     &-title {
         text-transform: uppercase;
-        margin: 8vw 0 3vw 0;
+        margin-bottom: 3vw;
         & h2 {
             font-weight: 300;
             &::after {
@@ -42,6 +60,15 @@
                 padding-top: 2vw;
                 width: 11vw;
             }
+        }
+    }
+    @include tablet-only {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 2vw;
+        &-title {
+            margin: 1vw 0 2vw 0
         }
     }
 }
@@ -72,8 +99,9 @@
     &-price {
         @include price-and-checked-position(17vw, flex-end);
         font-weight: 500;
-        transform: translateX(8vw);
+        /* transform: translateX(8vw); */
         transition: all 1000ms;
+        padding: 4vw 4vw;
     }
     &-checked {
         @include price-and-checked-position(0, center);
@@ -81,12 +109,24 @@
         color: white;
         background-color: $color-tertiary;
         transform: translateX(17vw);
-        transform: scale(0vw);
+        /* transform: scale(0vw); */
         transition: all 1000ms;
 
         & .icon {
             transform: rotate(0deg);
             transition: all 1000ms 320ms;
+        }
+    }
+    @include tablet-only {
+        margin-bottom: 2vw;
+        &-description {
+            padding: 2vw 0 2vw 3vw;
+        }
+        &-price {
+            padding: 2vw 2vw;
+        }
+        &-title {
+            margin-bottom: .5vw;
         }
     }
 }

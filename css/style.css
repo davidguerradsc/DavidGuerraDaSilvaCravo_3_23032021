@@ -1,5 +1,5 @@
 .card-content-heart:hover .default-icon {
-  transform: scaleX(0);
+  transform: scale(0);
   animation: fadeOut ease 2000ms;
   display: none;
 }
@@ -18,41 +18,29 @@
   }
 }
 
+.card-plat:hover .card-plat {
+  /* @include tablet-only {
+      @include price-and-checked-position(20vw, center);
+  } */
+}
 .card-plat:hover .card-plat-price {
   width: 17vw;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 4vw 4vw;
   transform: translateX(0);
 }
 .card-plat:hover .card-plat-checked {
-  width: 15vw;
+  width: 17vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4vw 4vw;
   display: flex;
   overflow: hidden;
   transform: translateX(0vw);
 }
 .card-plat:hover .card-plat-checked .icon {
   transform: rotate(360deg);
-}
-
-.card-plat-1 {
-  opacity: 0%;
-  animation: fadeIn ease 2000ms forwards;
-}
-.card-plat-2 {
-  opacity: 0%;
-  animation: fadeIn ease 2000ms forwards;
-  animation-delay: 300ms;
-}
-.card-plat-3 {
-  opacity: 0%;
-  animation: fadeIn ease 2000ms forwards;
-  animation-delay: 600ms;
 }
 
 .plat-1 {
@@ -167,6 +155,13 @@ th {
 .header-logo-arrow-back {
   margin-left: 3vw;
   text-decoration: none;
+  color: black;
+  position: absolute;
+}
+@media screen and (min-width: 768px) {
+  .header-logo-arrow-back {
+    font-size: 1.5rem;
+  }
 }
 
 .block-button {
@@ -174,6 +169,11 @@ th {
   justify-content: center;
   margin-bottom: 5vw;
   margin-top: 1vw;
+}
+@media screen and (min-width: 768px) {
+  .block-button {
+    margin: 0;
+  }
 }
 .block-button .btn {
   border: none;
@@ -183,10 +183,18 @@ th {
   background: linear-gradient(352deg, #9356DC, #FF79DA);
   color: white;
   box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.2);
+  min-width: 50vw;
+  text-align: center;
 }
 .block-button .btn:hover {
   background: linear-gradient(352deg, #9e67e0, #ff8de0);
   box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.7);
+}
+@media screen and (min-width: 768px) {
+  .block-button .btn {
+    padding: 3vw;
+    min-width: 35vw;
+  }
 }
 
 .selected-icon {
@@ -206,9 +214,7 @@ th {
   background: white;
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 70vw;
-  animation: fadeOut 3s forwards;
+  animation: fadeOut 3s linear forwards;
 }
 
 .anim8 {
@@ -216,6 +222,7 @@ th {
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .loader {
@@ -225,7 +232,7 @@ th {
   height: 120px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #31708e;
+  border-top-color: #9356DC;
   animation: spin 2s linear infinite;
 }
 
@@ -238,7 +245,7 @@ th {
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #5085a5;
+  border-top-color: #FF79DA;
   animation: spin 3s linear infinite;
 }
 
@@ -251,7 +258,7 @@ th {
   bottom: 15px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #8fc1e3;
+  border-top-color: #FF79DA;
   animation: spin 1.5s linear infinite;
 }
 
@@ -297,8 +304,20 @@ body {
   justify-content: center;
   box-shadow: 0px 3px 4px -1px rgba(0, 0, 0, 0.4);
 }
+@media screen and (min-width: 768px) {
+  .header-home {
+    padding: 3vw;
+    justify-content: flex-start;
+    padding-left: 4vw;
+  }
+}
 .header-home-logo {
-  width: 50%;
+  width: 60vw;
+}
+@media screen and (min-width: 768px) {
+  .header-home-logo {
+    width: 35vw;
+  }
 }
 .header-pages {
   display: flex;
@@ -307,13 +326,26 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (min-width: 768px) {
+  .header-pages {
+    padding: 3vw;
+    justify-content: flex-start;
+    padding-left: 4vw;
+  }
+}
 .header-pages-logo {
-  width: 50%;
-  transform: translate(-50%);
+  width: 60vw;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .header-pages-logo {
+    width: 35vw;
+  }
 }
 .header-search {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 3vw;
   background-color: #EAEAEA;
 }
@@ -321,6 +353,17 @@ body {
   color: #404040;
   font-size: 1.3rem;
   align-self: center;
+}
+@media screen and (min-width: 768px) {
+  .header-search {
+    width: 40vw;
+    height: 7vw;
+    border-radius: 15px;
+    justify-content: space-between;
+    position: absolute;
+    top: 2.5vw;
+    right: 4vw;
+  }
 }
 .header-search-input {
   border: none;
@@ -333,6 +376,7 @@ body {
   font-weight: 500;
 }
 .header-search-input::placeholder {
+  padding-left: 2vw;
   background-color: #eaeaea;
   color: #333333;
   font-size: 1rem;
@@ -344,11 +388,19 @@ body {
   font-size: 1rem;
   font-weight: 500;
 }
+@media screen and (min-width: 768px) {
+  .header-search-input {
+    width: 30vw;
+    margin-left: 0;
+  }
+}
 
-.footer {
+footer {
   background-color: #353535;
   color: white;
   padding: 6vw;
+}
+.footer {
   display: flex;
   flex-direction: column;
 }
@@ -357,19 +409,46 @@ body {
   text-decoration: none;
   margin-bottom: 2.5vw;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: unset;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .footer-links {
+    width: 40vw;
+    text-align: center;
+  }
+}
 
 .app-name {
   font-size: 1.1rem;
   letter-spacing: 0.05rem;
   margin-bottom: 5vw;
 }
+@media screen and (min-width: 768px) {
+  .app-name {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
 
 .icone-footer {
   margin-right: 3vw;
 }
+@media screen and (min-width: 768px) {
+  .icone-footer {
+    margin-right: 1vw;
+  }
+}
 
 .section {
   padding: 10vw 5vw;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 5vw;
+  }
 }
 .section-presentation {
   background-color: #f6f6f6;
@@ -384,13 +463,30 @@ body {
 .section-title::first-letter {
   text-transform: capitalize;
 }
+@media screen and (min-width: 768px) {
+  .section-title {
+    margin-bottom: 5vw;
+  }
+}
 .section-description {
   text-align: center;
   margin: 4vw 0vw 9vw;
 }
+@media screen and (min-width: 768px) {
+  .section-description {
+    margin-bottom: 5vw;
+  }
+}
 
 .title-presentation {
   margin: 0vw 12vw;
+}
+
+@media screen and (min-width: 768px) {
+  .operations {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 
 .operation {
@@ -432,6 +528,33 @@ body {
 .operation-content::first-letter {
   text-transform: capitalize;
 }
+@media screen and (min-width: 768px) {
+  .operation {
+    align-items: center;
+    padding: 1vw 0;
+    margin-bottom: 0;
+  }
+  .operation-sort {
+    width: 4vw;
+    height: 4vw;
+  }
+  .operation-icon {
+    font-size: 1.3em;
+    margin-left: 1vw;
+    margin-right: 2vw;
+  }
+  .operation-content {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 
 .card {
   height: 66vw;
@@ -440,14 +563,24 @@ body {
   background-color: white;
   box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.35);
   margin-bottom: 5vw;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    border-radius: 2vw;
+    width: 41vw;
+  }
 }
 .card-img {
   width: 90vw;
   height: 45vw;
   object-fit: cover;
+}
+.card .bottom {
   object-position: bottom;
-  border-top-left-radius: 5vw;
-  border-top-right-radius: 5vw;
+}
+.card .center {
+  object-position: center;
 }
 .card-content {
   display: flex;
@@ -471,6 +604,28 @@ body {
   font-size: 1.5rem;
   color: #5b5b5b;
 }
+@media screen and (min-width: 768px) {
+  .card {
+    width: 42vw;
+    height: 36vw;
+    /* &-img-center {
+        width: 42vw;
+        height: 25vw;
+    } */
+  }
+  .card-img {
+    width: 42vw;
+    height: 25vw;
+  }
+  .card-content {
+    margin: 0 3vw;
+    height: 0;
+    flex-wrap: unset;
+  }
+  .card-content-heart {
+    font-size: 2rem;
+  }
+}
 
 .restaurants-link {
   text-decoration: none;
@@ -486,11 +641,18 @@ body {
   font-weight: 500;
   color: #278870;
 }
-
-.header-logo-arrow-back {
-  color: black;
+@media screen and (min-width: 768px) {
+  .new-tag {
+    padding: 1vw 2vw;
+    top: -22vw;
+    left: 27vw;
+  }
 }
 
+/* .header-logo-arrow-back {
+    color: black;
+    position: absolute;
+} */
 .menu {
   background-color: #f6f6f6;
   border-top-left-radius: 25px;
@@ -503,24 +665,46 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 8vw;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 4vw 6vw 7vw;
+  }
+  .menu-header {
+    margin-bottom: 4vw;
+  }
 }
 
-.restaurant-name {
-  font-weight: lighter;
-  font-size: 2.1rem;
-}
-
+/* .restaurant-name {
+    font-weight: lighter;
+    font-size: 2.1rem;
+} */
 .title {
   font-size: 1.7rem;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
 }
 
 .restaurant-heart {
   padding-top: unset;
 }
 
+@media screen and (min-width: 768px) {
+  .sections-plats {
+    margin-bottom: 4vw;
+  }
+}
+
+.plat {
+  margin-bottom: 10vw;
+}
 .plat-title {
   text-transform: uppercase;
-  margin: 8vw 0 3vw 0;
+  margin-bottom: 3vw;
 }
 .plat-title h2 {
   font-weight: 300;
@@ -532,15 +716,33 @@ body {
   padding-top: 2vw;
   width: 11vw;
 }
+@media screen and (min-width: 768px) {
+  .plat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+  }
+  .plat-title {
+    margin: 1vw 0 2vw 0;
+  }
+}
 
 .card-plat {
   border-radius: 5vw;
   background-color: white;
   box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.35);
   margin-bottom: 5vw;
+  overflow: hidden;
   display: flex;
   overflow: hidden;
   white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .card-plat {
+    border-radius: 2vw;
+    width: 41vw;
+  }
 }
 .card-plat-description {
   width: 66vw;
@@ -565,27 +767,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 4vw 4vw;
   font-weight: 500;
-  transform: translateX(8vw);
+  /* transform: translateX(8vw); */
   transition: all 1000ms;
+  padding: 4vw 4vw;
 }
 .card-plat-checked {
   width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4vw 4vw;
   font-size: 1.4rem;
   color: white;
   background-color: #99E2D0;
   transform: translateX(17vw);
-  transform: scale(0vw);
+  /* transform: scale(0vw); */
   transition: all 1000ms;
 }
 .card-plat-checked .icon {
   transform: rotate(0deg);
   transition: all 1000ms 320ms;
+}
+@media screen and (min-width: 768px) {
+  .card-plat {
+    margin-bottom: 2vw;
+  }
+  .card-plat-description {
+    padding: 2vw 0 2vw 3vw;
+  }
+  .card-plat-price {
+    padding: 2vw 2vw;
+  }
+  .card-plat-title {
+    margin-bottom: 0.5vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

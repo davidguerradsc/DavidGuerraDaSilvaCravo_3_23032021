@@ -1,6 +1,11 @@
 .header-logo-arrow-back {
     margin-left: 3vw;
     text-decoration: none;
+    color: black;
+    position: absolute;
+    @include tablet-only {
+        font-size: 1.5rem;
+    }
 }
 
 .block-button {
