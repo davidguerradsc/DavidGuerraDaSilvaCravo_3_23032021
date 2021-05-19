@@ -32,7 +32,7 @@
   align-items: center;
   display: flex;
   overflow: hidden;
-  transform: translateX(0vw);
+  transform: translateX(0);
 }
 .card-plat:hover .card-plat-checked .icon {
   transform: rotate(360deg);
@@ -197,6 +197,12 @@ th {
     min-width: 30vw;
   }
 }
+@media screen and (min-width: 1440px) {
+  .block-button .btn {
+    padding: 1vw;
+    min-width: 15vw;
+  }
+}
 
 .selected-icon {
   display: none;
@@ -307,9 +313,13 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header-home {
-    padding: 3vw;
+    padding: 3vw 4vw;
     justify-content: flex-start;
-    padding-left: 4vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header-home {
+    padding: 2vw 5vw;
   }
 }
 .header-home-logo {
@@ -318,6 +328,11 @@ body {
 @media screen and (min-width: 768px) {
   .header-home-logo {
     width: 35vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header-home-logo {
+    width: 10vw;
   }
 }
 .header-pages {
@@ -329,9 +344,13 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header-pages {
-    padding: 3vw;
+    padding: 3vw 4vw;
     justify-content: flex-start;
-    padding-left: 4vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header-pages {
+    padding: 2vw 5vw;
   }
 }
 .header-pages-logo {
@@ -341,6 +360,11 @@ body {
 @media screen and (min-width: 768px) {
   .header-pages-logo {
     width: 35vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header-pages-logo {
+    width: 10vw;
   }
 }
 .header-search {
@@ -395,6 +419,25 @@ body {
     margin-left: 0;
   }
 }
+@media screen and (min-width: 1440px) {
+  .header-search {
+    width: 22vw;
+    height: 3vw;
+    padding: 0;
+    padding-left: 1vw;
+    justify-content: unset;
+    top: 1.5vw;
+  }
+  .header-search-input {
+    width: 16vw;
+    height: 2vw;
+    margin-left: 1vw;
+    border-bottom: 1px solid #9356DC;
+  }
+  .header-search-input::placeholder {
+    padding-left: 0;
+  }
+}
 
 footer {
   background-color: #353535;
@@ -404,6 +447,11 @@ footer {
 @media screen and (min-width: 1024px) {
   footer {
     padding: 4vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  footer {
+    padding: 2vw 4vw;
   }
 }
 
@@ -476,6 +524,11 @@ footer {
     padding: 3vw 5vw;
   }
 }
+@media screen and (min-width: 1440px) {
+  .section {
+    padding: 2vw 5vw;
+  }
+}
 .section-presentation {
   background-color: #f6f6f6;
   text-align: center;
@@ -500,7 +553,12 @@ footer {
 }
 @media screen and (min-width: 1024px) {
   .section-description {
-    margin: 3vw 0 3vw;
+    margin: 3vw 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-description {
+    margin: 2vw 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -511,6 +569,11 @@ footer {
 @media screen and (min-width: 1024px) {
   .section-title {
     margin-bottom: 3vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-title {
+    margin-bottom: 2vw;
   }
 }
 
@@ -593,6 +656,15 @@ footer {
     margin-right: 1vw;
   }
 }
+@media screen and (min-width: 1440px) {
+  .operation {
+    padding: 0.5vw 1vw 0.5vw 0;
+  }
+  .operation-sort {
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .cards {
@@ -604,6 +676,11 @@ footer {
 @media screen and (min-width: 1024px) {
   .cards {
     justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cards {
+    justify-content: space-between;
   }
 }
 
@@ -626,6 +703,11 @@ footer {
 @media screen and (min-width: 1024px) {
   .card {
     width: 28vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 21vw;
   }
 }
 .card-img {
@@ -693,6 +775,25 @@ footer {
     padding-right: 1vw;
   }
 }
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 18vw;
+    height: 15vw;
+  }
+  .card-img {
+    width: 18vw;
+    height: 10vw;
+  }
+  .card-content {
+    margin: 0vw 1vw;
+  }
+  .card-content-title {
+    margin: 0.5vw 0;
+  }
+  .card-content-heart {
+    padding-top: 1vw;
+  }
+}
 
 .restaurants-link {
   text-decoration: none;
@@ -721,6 +822,20 @@ footer {
     left: 23vw;
   }
 }
+@media screen and (min-width: 1440px) {
+  .new-tag {
+    padding: 0.5vw 1vw;
+    top: -8.5vw;
+    left: 11vw;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container-global {
+    padding: 0 10vw;
+    background-color: #f6f6f6;
+  }
+}
 
 @media screen and (min-width: 1024px) {
   .picture-resto {
@@ -728,6 +843,14 @@ footer {
     width: 100%;
     object-fit: cover;
     object-position: bottom;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .picture-resto {
+    height: 33vw;
+  }
+  .picture-resto-center {
+    object-position: center;
   }
 }
 
@@ -751,6 +874,16 @@ footer {
   }
   .menu-header {
     margin-bottom: 4vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu {
+    padding: 3vw 3vw 4vw;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .menu-header {
+    margin-bottom: 2vw;
   }
 }
 
@@ -801,6 +934,15 @@ footer {
     margin: 1vw 0 2vw 0;
   }
 }
+@media screen and (min-width: 1440px) {
+  .plat-title {
+    margin-bottom: 1vw;
+  }
+  .plat-title h2::after {
+    padding-top: 0.5vw;
+    width: 3vw;
+  }
+}
 
 .card-plat {
   border-radius: 5vw;
@@ -809,7 +951,6 @@ footer {
   margin-bottom: 5vw;
   overflow: hidden;
   display: flex;
-  overflow: hidden;
   white-space: nowrap;
 }
 @media screen and (min-width: 768px) {
@@ -822,6 +963,11 @@ footer {
 @media screen and (min-width: 1024px) {
   .card-plat {
     width: 28vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card-plat {
+    width: 21vw;
   }
 }
 .card-plat-description {
@@ -848,9 +994,9 @@ footer {
   justify-content: center;
   align-items: flex-end;
   font-weight: 500;
-  transform: translateX(4vw);
-  transition: all 1000ms;
   padding: 4vw 4vw;
+  transform: translateX(4vw);
+  transition: all linear 1000ms;
 }
 .card-plat-checked {
   width: 0;
@@ -861,11 +1007,11 @@ footer {
   color: white;
   background-color: #99E2D0;
   transform: translateX(17vw);
-  transition: all 1000ms;
+  transition: all linear 1000ms;
 }
 .card-plat-checked .icon {
   transform: rotate(0deg);
-  transition: all 1000ms 320ms;
+  transition: all linear 1000ms 320ms;
 }
 @media screen and (min-width: 768px) {
   .card-plat-description {

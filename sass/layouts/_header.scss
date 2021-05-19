@@ -16,7 +16,6 @@
             margin: auto;
         }
     }
-
     &-search {
         display: flex;
         justify-content: center;
@@ -54,6 +53,25 @@
         @include tablet-only {
             width: 30vw;
             margin-left: 0;
+        }
+    }
+    @include large-desktop-only {
+        &-search {
+            width: 22vw;
+            height: 3vw;
+            padding: 0;
+            padding-left: 1vw;
+            justify-content: unset;
+            top: 1.5vw;
+        }
+        &-search-input {
+            width: 16vw;
+            height: 2vw;
+            margin-left: 1vw;
+            border-bottom: 1px solid $color-primary ;
+            &::placeholder {
+                padding-left: 0;
+            }
         }
     }
     

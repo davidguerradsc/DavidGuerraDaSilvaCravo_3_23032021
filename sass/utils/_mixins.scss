@@ -3,6 +3,9 @@
     @include tablet-only {
         width: 35vw;
     }
+    @include large-desktop-only {
+        width: 10vw;
+    }
 }
 
 @mixin header-display {
@@ -11,9 +14,11 @@
     margin-bottom: 3px;
     align-items: center;
     @include tablet-only {
-        padding: 3vw;
+        padding: 3vw 4vw;
         justify-content: flex-start;
-        padding-left: 4vw;
+    }
+    @include large-desktop-only {
+        padding: 2vw 5vw;
     }
 }
 
@@ -24,6 +29,9 @@
     }
     @include desktop-only {
         padding: 3vw 5vw;
+    }
+    @include large-desktop-only {
+        padding: 2vw 5vw;
     }
 }
 
@@ -36,11 +44,14 @@
 @mixin text-description {
     text-align: center;
     margin: 4vw 0vw 9vw;
-    @include tablet-only{
+    @include tablet-only {
         margin-bottom: 5vw;
     }
     @include desktop-only {
-        margin: 3vw 0 3vw;
+        margin: 3vw 0;
+    }
+    @include large-desktop-only {
+        margin: 2vw 0;
     }
 }
 
@@ -78,12 +89,14 @@
     @include tablet-only {
         padding: 3vw;
         min-width: 35vw;
-        
     }
     @include desktop-only {
         padding: 2vw;
         min-width: 30vw;
-        
+    }
+    @include large-desktop-only {
+        padding: 1vw;
+        min-width: 15vw;
     }
 }
 
@@ -105,24 +118,29 @@
     @include desktop-only {
         width: 28vw;
     }
-   
+    @include large-desktop-only {
+        width: 21vw;
+    }
 }
 
-@mixin img ($position) {
+@mixin img($position) {
     width: 90vw;
-        height: 45vw;
-        object-fit: cover;
-        object-position: $position;
-        border-top-left-radius: 5vw;
-        border-top-right-radius: 5vw;
+    height: 45vw;
+    object-fit: cover;
+    object-position: $position;
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
 }
 
-@mixin price-and-checked-position($widthValue ,$alignValue) {
+@mixin picture-resto($position) {
+    object-position: $position;
+}
+
+@mixin price-and-checked-position($widthValue, $alignValue) {
     width: $widthValue;
     display: flex;
     justify-content: center;
     align-items: $alignValue;
-    
 }
 
 @mixin tablet-only {

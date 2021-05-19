@@ -24,6 +24,11 @@
             margin-bottom: 3vw;
         }
     }
+    @include large-desktop-only {
+        &-title {
+            margin-bottom: 2vw;
+        }
+    }
 }
 
 .title-presentation {
@@ -98,6 +103,13 @@
             margin-right: 1vw;
         }
     }
+    @include large-desktop-only {
+        padding: .5vw 1vw .5vw 0;
+        &-sort {
+            width: 1.5vw;
+            height: 1.5vw;
+        }
+    }
 }
 
 .cards {
@@ -108,6 +120,9 @@
     }
     @include desktop-only {
         justify-content: space-around;
+    }
+    @include desktop-only {
+        justify-content: space-between;
     }
 }
 
@@ -179,6 +194,23 @@
             }
         }
     }
+    @include large-desktop-only {
+        width: 18vw;
+        height: 15vw;
+        &-img {
+            width: 18vw;
+            height: 10vw;
+        }
+        &-content {
+            margin: 0vw 1vw;
+            &-title {
+                margin: .5vw 0;
+            }
+            &-heart {
+                padding-top: 1vw;
+            }
+        }
+    }
 }
 
 .restaurants-link {
@@ -202,5 +234,10 @@
     @include desktop-only {
         top: -18vw;
         left: 23vw;
+    }
+    @include large-desktop-only {
+        padding: .5vw 1vw;
+        top: -8.5vw;
+        left: 11vw;
     }
 }

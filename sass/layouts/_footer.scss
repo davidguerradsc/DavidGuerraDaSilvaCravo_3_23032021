@@ -6,6 +6,9 @@ footer {
     @include desktop-only {
         padding: 4vw;   
     }
+    @include large-desktop-only {
+        padding: 2vw 4vw;
+    }
 }
 
 .footer {
