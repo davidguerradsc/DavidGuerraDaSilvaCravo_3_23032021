@@ -10,12 +10,19 @@
     &-title {
         @include section-title;
         margin-bottom: 7vw;
-        @include tablet-only {
-            margin-bottom: 5vw;
-        }
     }
     &-description {
         @include text-description;
+    }
+    @include tablet-only {
+        &-title {
+            margin-bottom: 5vw;
+        }
+    }
+    @include desktop-only {
+        &-title {
+            margin-bottom: 3vw;
+        }
     }
 }
 
@@ -68,7 +75,7 @@
     }
     @include tablet-only {
         align-items: center;
-        padding: 1vw 0;
+        padding: 1vw 1vw;
         margin-bottom: 0;
         &-sort {
             width: 4vw;
@@ -83,6 +90,14 @@
             font-size: 0.9rem;
         }
     }
+    @include desktop-only {
+        margin-left: 0;
+        padding-right: 2vw;
+        &-icon {
+            margin-left: 0;
+            margin-right: 1vw;
+        }
+    }
 }
 
 .cards {
@@ -90,6 +105,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+    @include desktop-only {
+        justify-content: space-around;
     }
 }
 
@@ -138,16 +156,26 @@
             width: 42vw;
             height: 25vw;
         }
-        /* &-img-center {
-            width: 42vw;
-            height: 25vw;
-        } */
         &-content {
             margin: 0 3vw;
             height: 0;
             flex-wrap: unset;
             &-heart {
                 font-size: 2rem;
+            }
+        }
+    }
+    @include desktop-only {
+        width: 35vw;
+        height: 28vw;
+        &-img {
+            width: 35vw;
+            height: 20vw;
+        }
+        &-content {
+            &-heart {
+                padding-top: 2vw;
+                padding-right: 1vw;
             }
         }
     }
@@ -170,5 +198,9 @@
         padding: 1vw 2vw;
         top: -22vw;
         left: 27vw;
+    }
+    @include desktop-only {
+        top: -18vw;
+        left: 23vw;
     }
 }

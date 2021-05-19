@@ -18,11 +18,6 @@
   }
 }
 
-.card-plat:hover .card-plat {
-  /* @include tablet-only {
-      @include price-and-checked-position(20vw, center);
-  } */
-}
 .card-plat:hover .card-plat-price {
   width: 17vw;
   display: flex;
@@ -194,6 +189,12 @@ th {
   .block-button .btn {
     padding: 3vw;
     min-width: 35vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .block-button .btn {
+    padding: 2vw;
+    min-width: 30vw;
   }
 }
 
@@ -400,6 +401,12 @@ footer {
   color: white;
   padding: 6vw;
 }
+@media screen and (min-width: 1024px) {
+  footer {
+    padding: 4vw;
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -420,6 +427,14 @@ footer {
     text-align: center;
   }
 }
+@media screen and (min-width: 1024px) {
+  .footer {
+    flex-wrap: nowrap;
+  }
+  .footer-links {
+    width: unset;
+  }
+}
 
 .app-name {
   font-size: 1.1rem;
@@ -430,6 +445,12 @@ footer {
   .app-name {
     font-size: 2.5rem;
     text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .app-name {
+    font-size: 3.5rem;
+    margin-bottom: 3vw;
   }
 }
 
@@ -450,6 +471,11 @@ footer {
     padding: 5vw;
   }
 }
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 3vw 5vw;
+  }
+}
 .section-presentation {
   background-color: #f6f6f6;
   text-align: center;
@@ -463,11 +489,6 @@ footer {
 .section-title::first-letter {
   text-transform: capitalize;
 }
-@media screen and (min-width: 768px) {
-  .section-title {
-    margin-bottom: 5vw;
-  }
-}
 .section-description {
   text-align: center;
   margin: 4vw 0vw 9vw;
@@ -475,6 +496,21 @@ footer {
 @media screen and (min-width: 768px) {
   .section-description {
     margin-bottom: 5vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-description {
+    margin: 3vw 0 3vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-title {
+    margin-bottom: 5vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-title {
+    margin-bottom: 3vw;
   }
 }
 
@@ -531,7 +567,7 @@ footer {
 @media screen and (min-width: 768px) {
   .operation {
     align-items: center;
-    padding: 1vw 0;
+    padding: 1vw 1vw;
     margin-bottom: 0;
   }
   .operation-sort {
@@ -547,12 +583,27 @@ footer {
     font-size: 0.9rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .operation {
+    margin-left: 0;
+    padding-right: 2vw;
+  }
+  .operation-icon {
+    margin-left: 0;
+    margin-right: 1vw;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cards {
+    justify-content: space-around;
   }
 }
 
@@ -569,6 +620,12 @@ footer {
   .card {
     border-radius: 2vw;
     width: 41vw;
+    margin-bottom: 2vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 28vw;
   }
 }
 .card-img {
@@ -608,10 +665,6 @@ footer {
   .card {
     width: 42vw;
     height: 36vw;
-    /* &-img-center {
-        width: 42vw;
-        height: 25vw;
-    } */
   }
   .card-img {
     width: 42vw;
@@ -624,6 +677,20 @@ footer {
   }
   .card-content-heart {
     font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 35vw;
+    height: 28vw;
+  }
+  .card-img {
+    width: 35vw;
+    height: 20vw;
+  }
+  .card-content-heart {
+    padding-top: 2vw;
+    padding-right: 1vw;
   }
 }
 
@@ -648,11 +715,22 @@ footer {
     left: 27vw;
   }
 }
+@media screen and (min-width: 1024px) {
+  .new-tag {
+    top: -18vw;
+    left: 23vw;
+  }
+}
 
-/* .header-logo-arrow-back {
-    color: black;
-    position: absolute;
-} */
+@media screen and (min-width: 1024px) {
+  .picture-resto {
+    height: 38vw;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}
+
 .menu {
   background-color: #f6f6f6;
   border-top-left-radius: 25px;
@@ -676,10 +754,6 @@ footer {
   }
 }
 
-/* .restaurant-name {
-    font-weight: lighter;
-    font-size: 2.1rem;
-} */
 .title {
   font-size: 1.7rem;
 }
@@ -742,6 +816,12 @@ footer {
   .card-plat {
     border-radius: 2vw;
     width: 41vw;
+    margin-bottom: 2vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-plat {
+    width: 28vw;
   }
 }
 .card-plat-description {
@@ -768,7 +848,7 @@ footer {
   justify-content: center;
   align-items: flex-end;
   font-weight: 500;
-  /* transform: translateX(8vw); */
+  transform: translateX(4vw);
   transition: all 1000ms;
   padding: 4vw 4vw;
 }
@@ -781,7 +861,6 @@ footer {
   color: white;
   background-color: #99E2D0;
   transform: translateX(17vw);
-  /* transform: scale(0vw); */
   transition: all 1000ms;
 }
 .card-plat-checked .icon {
@@ -789,17 +868,26 @@ footer {
   transition: all 1000ms 320ms;
 }
 @media screen and (min-width: 768px) {
-  .card-plat {
-    margin-bottom: 2vw;
-  }
   .card-plat-description {
     padding: 2vw 0 2vw 3vw;
   }
   .card-plat-price {
     padding: 2vw 2vw;
+    transform: translateX(0vw);
   }
   .card-plat-title {
     margin-bottom: 0.5vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card-plat-description {
+    padding: 1vw 0 1vw 2vw;
+  }
+  .card-plat-price {
+    padding: 1vw 1vw;
+  }
+  .card-plat-checked {
+    transform: translateX(5vw);
   }
 }
 

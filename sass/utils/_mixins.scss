@@ -22,6 +22,9 @@
     @include tablet-only {
         padding: 5vw;
     }
+    @include desktop-only {
+        padding: 3vw 5vw;
+    }
 }
 
 @mixin section-title {
@@ -35,6 +38,9 @@
     margin: 4vw 0vw 9vw;
     @include tablet-only{
         margin-bottom: 5vw;
+    }
+    @include desktop-only {
+        margin: 3vw 0 3vw;
     }
 }
 
@@ -74,6 +80,11 @@
         min-width: 35vw;
         
     }
+    @include desktop-only {
+        padding: 2vw;
+        min-width: 30vw;
+        
+    }
 }
 
 @mixin card-operation {
@@ -89,7 +100,12 @@
     @include tablet-only {
         border-radius: 2vw;
         width: 41vw;
+        margin-bottom: 2vw;
     }
+    @include desktop-only {
+        width: 28vw;
+    }
+   
 }
 
 @mixin img ($position) {

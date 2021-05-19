@@ -1,7 +1,11 @@
-/* .header-logo-arrow-back {
-    color: black;
-    position: absolute;
-} */
+.picture-resto {
+    @include desktop-only {
+        height: 38vw;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
+    }
+}
 
 .menu {
     background-color: $color-background;
@@ -23,11 +27,6 @@
         }
     }
 }
-
-/* .restaurant-name {
-    font-weight: lighter;
-    font-size: 2.1rem;
-} */
 
 .title {
     font-size: 1.7rem;
@@ -68,7 +67,7 @@
         justify-content: space-between;
         margin-bottom: 2vw;
         &-title {
-            margin: 1vw 0 2vw 0
+            margin: 1vw 0 2vw 0;
         }
     }
 }
@@ -99,7 +98,7 @@
     &-price {
         @include price-and-checked-position(17vw, flex-end);
         font-weight: 500;
-        /* transform: translateX(8vw); */
+        transform: translateX(4vw);
         transition: all 1000ms;
         padding: 4vw 4vw;
     }
@@ -109,7 +108,6 @@
         color: white;
         background-color: $color-tertiary;
         transform: translateX(17vw);
-        /* transform: scale(0vw); */
         transition: all 1000ms;
 
         & .icon {
@@ -118,15 +116,26 @@
         }
     }
     @include tablet-only {
-        margin-bottom: 2vw;
         &-description {
             padding: 2vw 0 2vw 3vw;
         }
         &-price {
             padding: 2vw 2vw;
+            transform: translateX(0vw);
         }
         &-title {
-            margin-bottom: .5vw;
+            margin-bottom: 0.5vw;
+        }
+    }
+    @include desktop-only {
+        &-description {
+            padding: 1vw 0 1vw 2vw;
+        }
+        &-price {
+            padding: 1vw 1vw;
+        }
+        &-checked {
+            transform: translateX(5vw);
         }
     }
 }
