@@ -38,6 +38,24 @@
                 transform: rotate(360deg);
             }
         }
+        @include tablet-only {
+            &-price {
+                @include price-and-checked-position(10vw, flex-end);
+            }
+            &-checked {
+
+                @include price-and-checked-position(10vw, center);
+            }
+        }
+        @include desktop-only {
+            &-price {
+                @include price-and-checked-position(7vw, flex-end);
+            }
+            &-checked {
+
+                @include price-and-checked-position(6vw, center);
+            }
+        }
     }
 }
 

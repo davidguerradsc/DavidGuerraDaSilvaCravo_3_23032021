@@ -131,26 +131,28 @@
         font-weight: 500;
         padding: 4vw 4vw;
         transform: translateX(4vw);
-        transition: all linear 1000ms;
+        /* transition: all linear 500ms; */
     }
     &-checked {
         @include price-and-checked-position(0, center);
         font-size: 1.4rem;
-        color: white;
         background-color: $color-tertiary;
         transform: translateX(17vw);
-        transition: all linear 1000ms;
-
+        transition: all linear 500ms;
+        
         & .icon {
+            color: white;
             transform: rotate(0deg);
-            transition: all linear 1000ms 320ms;
+            transition: all linear 500ms 300ms;
         }
     }
     @include tablet-only {
         &-description {
+            width: 30vw;
             padding: 2vw 0 2vw 3vw;
         }
         &-price {
+            width: 10vw;
             padding: 2vw 2vw;
             transform: translateX(0vw);
         }
@@ -160,13 +162,23 @@
     }
     @include desktop-only {
         &-description {
+            width: 22vw;
             padding: 1vw 0 1vw 2vw;
         }
         &-price {
+            width: 6vw;
             padding: 1vw 1vw;
         }
         &-checked {
             transform: translateX(5vw);
+        }
+    }
+    @include large-desktop-only {
+        &-description {
+            width: 17vw;
+        }
+        &-price {
+            width: 5vw;
         }
     }
 }
