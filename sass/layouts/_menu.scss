@@ -6,10 +6,14 @@
 }
 
 .picture-resto {
+    height: 70vw;
+    width: 100%;
+    object-fit: cover;
+    @include tablet-only {
+        height: 65vw;
+    }
     @include desktop-only {
         height: 38vw;
-        width: 100%;
-        object-fit: cover;
         object-position: bottom;
     }
     @include large-desktop-only {
