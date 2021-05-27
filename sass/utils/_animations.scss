@@ -94,3 +94,17 @@
         transform: translateY(0vw);
     }
 }
+@-webkit-keyframes moove {
+    0% {
+        -webkit-opacity: 0%;
+    }
+
+    50% {
+        -webkit-opacity: 20%;
+    }
+    
+    100% {
+        -webkit-opacity: 100%;
+        -webkit-transform: translateY(0vw);
+    }
+}
