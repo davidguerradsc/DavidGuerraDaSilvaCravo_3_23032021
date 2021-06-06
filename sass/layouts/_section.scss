@@ -121,7 +121,7 @@
     @include desktop-only {
         justify-content: space-around;
     }
-    @include desktop-only {
+    @include large-desktop-only {
         justify-content: space-between;
     }
 }
